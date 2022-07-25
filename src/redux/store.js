@@ -27,10 +27,10 @@ const store = configureStore({
     [contactsApi.reducerPath]: contactsApi.reducer,
   },
   middleware: getDefaultMiddleware =>
-    getDefaultMiddleware().concat(contactsApi.middleware),
-  serializableCheck: {
+    getDefaultMiddleware({ serializableCheck: {
     ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-  },
+  },}).concat(contactsApi.middleware),
+ 
 });
 
 const persistor = persistStore(store);
