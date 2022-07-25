@@ -1,19 +1,20 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { phonebookAction, phonebookSelector } from '../../redux';
-import s from './filter.module.css';
+import React from 'react';
+import { changeFilter } from 'redux/slice';
+import { useDispatch } from 'react-redux/es/exports';
+import s from './Filter.module.css';
 
-export default function Filter() {
-  const filter = useSelector(phonebookSelector.getFilter);
-    const dispatch = useDispatch();
+const Filter = () => {
+  const dispatch = useDispatch();
+  const onChangeFilter = event => {
+    dispatch(changeFilter(event.target.value));
+  };
+
   return (
-    <label className={s.filter}>
+    <label className={s.label}>
       Find contacts by name
-      <input
-        className={s.input}
-        type="text"
-        value={filter}
-        onChange={e => dispatch(phonebookAction.changeFilter(e.target.value))}
-      ></input>
+      <input className={s.input} type="text" onChange={onChangeFilter} />
     </label>
   );
-}
+};
+
+export default Filter;

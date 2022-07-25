@@ -1,0 +1,30 @@
+.form {
+    width: 650px;
+    margin: 100px auto;
+    padding: 20px 40px;
+    border: 2px solid violet;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px violet;
+}
+
+.header {
+    border-bottom: 1px solid violet;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: blue;
+}
+
+.activeLink {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 800;
+    color: violet;
+}

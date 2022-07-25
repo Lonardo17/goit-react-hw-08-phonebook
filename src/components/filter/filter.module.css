@@ -1,9 +1,13 @@
-.filter{
+.label {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    width: 350px;
+    font-size: 20px;
 }
-.input{
-    width: 200px;
+
+.input {
+    width: 250px;
+    height: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 12px;
 }
