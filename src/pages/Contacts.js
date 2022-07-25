@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { getIsLoggedIn } from 'redux/selectors';
 import { Toaster } from 'react-hot-toast';
 import ContactForm from '../components/ContactForm/ContactForm';
-import Filter from 'components/Filter/Filter';
+import Filter from 'components/FilterComponent/FilterComponent';
 import ContactList from '../components/ContactList/ContactList';
 import HomePage from './HomePage/HomePage';
 
