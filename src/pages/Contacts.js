@@ -2,10 +2,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { getIsLoggedIn } from 'redux/selectors';
 import { Toaster } from 'react-hot-toast';
-import ContactForm from 'components/ContactForm/ContactForm';
-import Filter from 'components/Filter/Filter';
-import ContactList from 'components/ContactList/ContactList';
-import HomePage from 'pages/HomePage/HomePage';
+import ContactForm from '../components/ContactForm/ContactForm';
+import Filter from '../components/Filter/Filter';
+import ContactList from '../components/ContactList/ContactList';
+import HomePage from './HomePage/HomePage';
 
 const Contacts = () => {
   const isLoggedIn = useSelector(getIsLoggedIn);
